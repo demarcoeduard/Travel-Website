@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: #11316c;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+#navElements {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-left: 70px;
+}
+
+nav a:hover {
+    background-color: #0a1e42;
+    transition: all 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 150px;
+    color: #11316c;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+i {
+    padding-right: 10px;
+}
+
+/* SEARCH */
+
+#searchInput {
+    border: none;
+    padding: 5px;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+.filtered {
+    display: none;
+}
+
+#search {
+    position: absolute;
+    margin-top: 60px;
+    right: 0;
+    background-color:#11316c;
+    width: 229px;
+    animation: growDown 0.3s;
+    transform-origin: top;
+}
+
+#search a {
+    margin-left: -40px;
+    justify-content: center;
+}
+
+.invisible {
+    display: none;
+}
+
+li {
+    list-style: none;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* HAMBURGER MENU */
+
+#hamburger {
+    display: none;
+    z-index: 1;
+    margin-right: 10px;
+}
+
+#hamburgerMenu {
+    position: absolute;
+    width: 100%;
+    background-color: #11316c;
+    text-align: center;
+    animation: growDown 0.3s;
+    transform-origin: top;
+}
+
+#hamburgerMenu a {
+    justify-content: center;
+    padding: 20px;
+}
+
+#hamburgerMenu #searchSection {
+    display: none;
+}
+
+#hamburgerMenu #search {
+    margin-top: 500px;
+}
+
+/* HAMBURGER MENU SEARCH */
+
+#searchInput2 {
+    border: none;
+    padding: 5px;
+}
+
+#searchInput2:focus {
+    outline: none;
+}
+
+#search2 {
+    position: absolute;
+    margin-top: 0px;
+    background-color:#11316c;
+    width: 100%;
+    animation: growDown 0.3s;
+    transform-origin: top;
+}
+
+#search2 a {
+    margin-left: -40px;
+    justify-content: center;
+}
+
+/* OFFERS */
+
+.card {
+    width: 400px;
+    text-align: center;
+    background-color: #11316c;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card p {
+    padding: 10px 0px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.card button {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;    
+    font-weight: bold;
+}
+
+.card a {
+    color: #11316c;
+}
+
+.card button:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+    background-color: #0a1e42;
+}
+
+.card button:hover > a {
+    color: white;
+    transition: all 0.5s;
+}
+
+#oferte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 100px;
+    column-gap: 150px;
+    padding-top: 100px;
+}
+
+/* FOOTER */
+
+.container-sectiune {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-sectiune h3 {
+    padding-bottom: 25px;
+}
+
+footer {
+    background-color: #11316c;
+    color: white;
+    margin-top: 200px;
+    font-size: 20px;
+    padding-top: 50px;
+}
+
+footer p {
+    text-align: center;
+    line-height: 40px;
+}
+
+footer p:last-of-type {
+    font-weight: bold;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-title {
+    font-size: 30px;
+}
+
+footer input, textarea {
+    width: 250px;
+    border: none;
+}
+
+footer input:focus, textarea:focus {
+    outline: none;
+}
+
+footer input {
+    height: 30px;
+}
+
+#submitBtn {
+    border: none;
+    font-size: 25px;
+    border-radius: 5px;
+    color: #11316c;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* DESTINATIONS */
+
+#info {
+    font-size: 20px;
+    line-height: 50px;
+    padding: 10px;
+    background-color: #11316c;
+    color: white;
+    margin-bottom: 50px;
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#info p {
+    padding-bottom: 30px;
+}
+
+#info a {
+    color: white;
+    font-weight: bold;
+}
+
+#oferta {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#ofertaHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: #11316c;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#oferta img:first-of-type {
+    margin-top: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#oferta img {
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#oferta a {
+    line-height: 200px;
+}
+
+/* MEDIA */
+
+@media (width < 1000px) {
+    #info {
+        width: 800px;
+    }
+
+    #oferta {
+        width: 800px;
+    }
+}
+
+@media (width > 800px) {
+    #hamburgerMenu {
+        visibility: hidden;
+    }
+}
+
+@media (width < 800px) {
+    #info {
+        width: 600px;
+    }
+
+    #oferta {
+        width: 600px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 50px;
+    }
+
+    #hamburger {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #hamburgerMenu #searchSection {
+        display: block;
+    }
+
+    #navElements, #searchSection {
+        display: none;
+    }
+}
+
+@media (width < 600px) {
+    #info {
+        width: 400px;
+        font-size: 15px;
+    }
+
+    #oferta {
+        width: 450px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+}
+
+@media (width < 500px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .card {
+        transform: scale(0.8);
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
